@@ -15,9 +15,19 @@ const Gallery = props => {
         key={image.id}
       />
     ));
+  } else {
+    return (
+      <div className="photo-container">
+        <h2>No Results Found</h2>
+        <div className="not-found">
+          Your search did not return any results. Please try again.
+        </div>
+      </div>
+    );
   }
   return (
     <div className="photo-container">
+      <h2>{props.name}</h2>
       <ul>{photos}</ul>
     </div>
   );
