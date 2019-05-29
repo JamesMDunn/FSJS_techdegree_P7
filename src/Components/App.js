@@ -60,7 +60,7 @@ export class App extends Component {
   render() {
     const { images, cats, dogs, computers, isLoading, search } = this.state;
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/FSJS_techdegree_P7">
         <div className="container">
           <Header title="Gallery" />
           <Search onSearch={this.performSearch} />
